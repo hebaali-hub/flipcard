@@ -1,0 +1,204 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: auto;
+    perspective: 600px;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(45deg, #4e6d74 0%, #fafbff 100%);
+}
+h1{
+   
+margin: 15px auto;
+   
+text-align: center;
+   
+font-size: 70px;
+   
+color: aliceblue;
+   
+perspective: 100px;
+   
+transform: translateY(-27%) translateZ(-81px) scale(0.94);
+}
+
+.head{
+    position: absolute;
+    top: -3px;
+    left: 25%;
+    /* width: 100%; */
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+   
+
+
+.box-price {
+    width: 80%;
+    padding: 115px 0;
+    height: auto;
+    position: relative;
+    overflow: auto;
+    margin-top: 100px;
+    margin: 35px auto 0;
+}
+
+.front-face,
+.back-face,
+.contents {
+
+    position: absolute;
+}
+
+.col1,
+.col2,
+.col3,
+.col4,
+.col5 {
+    position: relative;
+    /* top:50%; */
+    float: left;
+    /* width: 300px; */
+    /* transform: translateY(-50%); */
+    width: calc((100% - 5%) / 5);
+    height: 350px;
+    margin: 0 1% 20px 0;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    /* background-color: brown; */
+}
+
+.front-face,
+.back-face {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.col1.part1 .front-face{
+    background: url(../Images/images1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.col2.part1 .front-face{
+    background: url(../Images/images2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.col3.part1 .front-face{background: url(../Images/images3.jpg);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;}
+
+.col4.part1 .front-face{background: url(../Images/images4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;}
+.col5.part1 .front-face{background: url(../Images/images5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;}
+.col1.part2 .front-face{
+    background: url(../Images/images6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;}
+.col2.part2 .front-face{
+    background: url(../Images/images7.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;}
+.col3.part2 .front-face{
+    background: url(../Images/images8.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;}
+.col4.part2 .front-face{
+    background: url(../Images/images9.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;}
+.col5.part2 .front-face{
+    background: url(../Images/images10.jpg);
+ 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;}
+.contents {
+    left: 0;
+    top: 50%;
+    width: 100%;
+    perspective: 100px;
+    transform: translateY(-50%)translateZ(60px)scale(0.94);
+}
+
+.front p {
+    color: aliceblue;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.front span {
+    color: aliceblue;
+    font-size: 19px;
+}
+
+.front p::after {
+    content: '';
+    display: block;
+    left: 0;
+    right: 0;
+    height: 2px;
+    width: 100px;
+    background-color: aliceblue;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.back-face {
+    background: linear-gradient(45deg, #4e6d74 0%, #8b9fa4 100%);
+    transform: rotateY(180deg);
+}
+
+.back {
+    color: aliceblue;
+}
+
+.back h2 {
+    font-size: 33px;
+    padding-bottom: 5px;
+}
+
+.back span {
+    font-size: 25px;
+    padding-bottom: 5px;
+}
+
+.col1:hover>.back-face,
+.col2:hover>.back-face,
+.col3:hover>.back-face,
+.col4:hover>.back-face,
+.col5:hover>.back-face {
+    transform: rotateY(0deg);
+}
+
+.col1:hover>.front-face,
+.col2:hover>.front-face,
+.col3:hover>.front-face,
+.col4:hover>.front-face,
+.col5:hover>.front-face {
+    transform: rotateY(-180deg);
+}
+.head:hover {
+    /* transform: rotateY(180deg); */
+}
